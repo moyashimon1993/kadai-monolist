@@ -3,10 +3,12 @@
   <div class="cover">
     <div class="cover-innner">
       <div class="cover-contents">
-        <h1>素敵なモノと出会う場所</h1>
-        <a href="" class="btn btn-success btn-lg">モノリストを始める</a>
+        <h1>aaa</h1>
+        <% unless logged_in? %>
+        <%= link_to "ものリストを始める", signup_path, class: "btn btn-success btn-lg" %>
+        <% end %>
       </div>
     </div>
   </div>
 <% end %>
-  <p>てすと</p>
+<%= render 'items/items', items: @items %>
